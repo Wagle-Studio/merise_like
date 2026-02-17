@@ -65,8 +65,7 @@ Aujourd’hui, le projet embarque un **Domain Merise** (schémas MCD pour bases 
 
 ### Kernel + schéma
 
-<details>
-  <summary>Socle central de l’application, il gère les services transverses (sauvegardes, paramètres, dialogues, notifications, erreurs) et expose des opérations cohérentes au reste du système.</summary>
+Socle central de l’application, il gère les services transverses (sauvegardes, paramètres, dialogues, notifications, erreurs) et expose des opérations cohérentes au reste du système.
 
 ---
 
@@ -80,14 +79,11 @@ La Kernel Factory se charge de construire et d’exposer vers le reste de l’ap
 
 ![Schéma du Kernel](./public/draw_kernel.jpg)
 
-</details>
-
 ---
 
 ### Domains + schéma
 
-<details>
-  <summary>Couche métier spécialisée, construite au-dessus du Kernel pour modéliser un type de diagramme précis (Merise, mind map, etc.).</summary>
+Couche métier spécialisée, construite au-dessus du Kernel pour modéliser un type de diagramme précis (Merise, mind map, etc.).
 
 ---
 
@@ -107,14 +103,11 @@ Enfin, la Domain Factory expose les **opérations** et **dépendances** construi
 
 ![Schéma du Domain Example](./public/draw_domain_example.jpg)
 
-</details>
-
 ---
 
 ### Managers
 
-<details>
-  <summary>Responsables d’un périmètre fonctionnel (flow, merise, settings, save, toast…), ils encapsulent leurs états et exposent des méthodes publiques sûres.</summary>
+Responsables d’un périmètre fonctionnel (flow, merise, settings, save, toast…), ils encapsulent leurs états et exposent des méthodes publiques sûres.
 
 ---
 
@@ -126,14 +119,11 @@ Chaque manager est responsable d’un pan fonctionnel de l’application (dialog
 
 Il expose ensuite un ensemble de méthodes publiques, permettant à l’orchestrateur (Kernel Manager ou Domain Manager) de composer des opérations plus complexes tout en préservant l’intégrité des données et la séparation des responsabilités.
 
-</details>
-
 ---
 
 ### DTO
 
-<details>
-  <summary>Objets de transfert immutables représentant l’état courant, produits et validés par les managers pour garantir cohérence et traçabilité.</summary>
+Objets de transfert immutables représentant l’état courant, produits et validés par les managers pour garantir cohérence et traçabilité.
 
 ---
 
@@ -145,8 +135,6 @@ Chaque mutation passe par un manager, qui produit un nouveau DTO plutôt que de 
 Ce mécanisme favorise la **traçabilité**, simplifie le **debug**, et renforce la robustesse de l’application en éliminant les effets de bord.
 
 Les DTO constituent ainsi le **contrat stable** entre la logique métier et l’interface utilisateur.
-
-</details>
 
 ## Architecture
 
