@@ -1,8 +1,14 @@
 # Merise
 
-[🔗 Application en ligne](https://merise-liard.vercel.app/)
+[🔗 Application en ligne](https://merise.wolff-kevin.fr/)
 
-Application de modélisation entité-relation inspirée de Looping, pensée pour être modulaire et extensible à d’autres types de diagrammes (Merise, mind map, etc.).
+Application de modélisation entité-relation inspirée de Looping.
+
+Conçue comme une **mise en pratique de l'architecture Domain Driven Design**, elle permet (en partie) de concevoir des MCD rapidement, via une interface fluide en drag-and-drop et des règles de cohérence intégrées.
+
+Le projet met l’accent sur la modularité des domaines, ce qui en fait une base solide pour explorer d’autres types de diagrammes.
+
+Ce projet n’est qu’une expérimentation et je ne souhaite pas le développer au-delà de ce qui a déjà été réalisé.
 
 ## Fonctionnalités
 
@@ -19,23 +25,13 @@ Application de modélisation entité-relation inspirée de Looping, pensée pour
 - **State** Context API et Managers dédiés
 - **Qualité** ESLint + Prettier + TypeScript strict
 
-## Licence
-
-Ce projet est distribué sous licence MIT.  
-Vous êtes libre de l'utiliser, le modifier et le redistribuer comme vous le souhaitez.
-
 ## Installation
 
 ```bash
-git clone git@github.com:Wagle-Studio/Merise.git wagle-studio-merise
-cd wagle-studio-merise
-
+git clone git@github.com:Wagle-Studio/merise_like.git
+cd merise_like
 npm install
-
 npm run dev
-
-npm run build
-npm run preview
 ```
 
 ## Documentations
